@@ -1,12 +1,6 @@
 <template>
-  <v-app>
-    <v-toolbar app dark>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Todo-</span>
-        <span class="font-weight-light">man</span>
-      </v-toolbar-title>
-    </v-toolbar>
-
+  <v-app class="grey lighten-4">
+    <Navbar/>
     <v-content>
       <router-view></router-view>
     </v-content>
@@ -14,13 +8,14 @@
 </template>
 
 <script>
-
-export default {
-  name: 'App',
-  data () {
-    return {
-      //
+  import Navbar from '@/components/Navbar'
+  export default {
+    name: 'App',
+    components: {Navbar},
+    data () {
+      return {
+        //
+      }
     }
   }
-}
 </script>
