@@ -2,6 +2,16 @@
   <div class="dashboard">
     <h1 class="subheading grey--text my-4">Dashboard</h1>
     <v-container class="my-5">
+      <v-layout row class="mb-3">
+        <v-btn flat small color="grey" @click="sortBy('title')">
+          <v-icon small left>folder</v-icon>
+          <span class="caption text-lowercase">by project name</span>
+        </v-btn>
+         <v-btn flat small color="grey" @click="sortBy('person')">
+          <v-icon small left>person</v-icon>
+          <span class="caption text-lowercase">by person</span>
+        </v-btn>
+      </v-layout>
       <v-card flat class="pa-3" v-for="project in projects" :key="project.title">
         <v-layout row wrap :class="`pa-3 project ${project.status}`">
           <v-flex xs12 md6>
@@ -35,12 +45,19 @@
     data () {
       return {
         projects:[
-           {title:"Learn Data Science", person:"man san", due: "32th Jan 2019", status:"ongoing", content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
-           {title:"Cool off man", person:"man san", due: "32th Jan 2019", status:"overdue", content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
-           {title:"Master the cooky", person:"man san", due: "32th Jan 2019", status:"complete", content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
-           {title:"Learn Vue", person:"man san", due: "32th Jan 2019", status:"ongoing", content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
-           {title:"Call her now", person:"man san", due: "32th Jan 2019", status:"complete", content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."}
+           {title:"Learn Data Science", person:"John Doe", due: "32th Jan 2019", status:"ongoing", content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
+           {title:"Cool off man", person:"Sam Fox", due: "32th Jan 2019", status:"overdue", content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
+           {title:"Master the cooky", person:"Max Fish", due: "32th Jan 2019", status:"complete", content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
+           {title:"Learn Vue", person:"Ice Cream", due: "32th Jan 2019", status:"ongoing", content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
+           {title:"Call her now", person:"Coffee Newman", due: "32th Jan 2019", status:"complete", content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."}
         ]
+      }
+    },
+    methods:{
+      sortBy(props){
+        this.projects.sort((a, b) =>
+          a[props] < b[props] ? -1 : 1
+        )
       }
     }
   }
