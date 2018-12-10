@@ -3,14 +3,20 @@
     <h1 class="subheading grey--text my-4">Dashboard</h1>
     <v-container class="my-5">
       <v-layout row class="mb-3">
-        <v-btn flat small color="grey" @click="sortBy('title')">
-          <v-icon small left>folder</v-icon>
-          <span class="caption text-lowercase">by project name</span>
+        <v-tooltip top>
+           <v-btn flat small color="grey" @click="sortBy('title')"  slot="activator">
+            <v-icon small left>folder</v-icon>
+            <span class="caption text-lowercase">by project name</span>
         </v-btn>
-         <v-btn flat small color="grey" @click="sortBy('person')">
-          <v-icon small left>person</v-icon>
-          <span class="caption text-lowercase">by person</span>
+         <span>Sort project by project name</span>
+        </v-tooltip>
+         <v-tooltip top>
+           <v-btn flat small color="grey" @click="sortBy('title')"  slot="activator">
+            <v-icon small left>person</v-icon>
+            <span class="caption text-lowercase">by project name</span>
         </v-btn>
+         <span>Sort project by person</span>
+        </v-tooltip>
       </v-layout>
       <v-card flat class="pa-3" v-for="project in projects" :key="project.title">
         <v-layout row wrap :class="`pa-3 project ${project.status}`">
