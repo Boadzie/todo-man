@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard">
-    <h1 class="subheading grey--text">Dashboard</h1>
+    <h1 class="subheading grey--text my-4">Dashboard</h1>
     <v-container class="my-5">
       <v-card flat class="pa-3" v-for="project in projects" :key="project.title">
         <v-layout row wrap :class="`pa-3 project ${project.status}`">
