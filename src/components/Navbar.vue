@@ -34,6 +34,9 @@
                  </v-avatar>
                  <p class="white--text subheading mt-1">John Doe</p>
                </v-flex>
+               <v-flex class="mt-2 mb-2">
+                   <PopUp />
+               </v-flex>
             </v-layout>
            <v-list>
               <v-list-tile v-for="link in links" :key="link.text" router :to="link.route">
@@ -52,7 +55,9 @@
 </template>
 
 <script>
+    import PopUp from "./PopUp"
     export default {
+        components: {PopUp},
         data (){
             return{
                 drawer: false,
