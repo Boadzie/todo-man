@@ -19,7 +19,7 @@
                  <v-avatar size="100">
                    <img src="/icons8-avatar-480.png" alt="">
                  </v-avatar>
-                 <p class="white--text subheading mt-1">Avatar Bitch</p>
+                 <p class="white--text subheading mt-1">John Doe</p>
                </v-flex>
             </v-layout>
            <v-list>
