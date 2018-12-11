@@ -35,7 +35,7 @@
         team:[
           {name:"John Smith", role:"Software Engineer", avatar:"/icons8-administrator-male-480.png"},
           {name:"Ackah Web", role:"Web Developer", avatar:"/icons8-andorian-head-480.png"},
-          {name:"John Smith", role:"DevOp Engineer", avatar:"/icons8-avatar-480.png"},
+          {name:"Hack Dew", role:"DevOp Engineer", avatar:"/icons8-avatar-480.png"},
           {name:"Bruce Wayne", role:"Content Writer", avatar:"/icons8-rick-sanchez-480.png"},
           {name:"Don Nature", role:"Data Science", avatar:"/icons8-morty-smith-480.png"},
         ]

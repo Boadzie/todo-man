@@ -32,7 +32,7 @@
                  <v-avatar size="100">
                    <img src="/icons8-avatar-480.png" alt="">
                  </v-avatar>
-                 <p class="white--text subheading mt-1">John Doe</p>
+                 <p class="white--text subheading mt-1">Hack Dew</p>
                </v-flex>
                <v-flex class="mt-2 mb-2">
                    <PopUp />
