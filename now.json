@@ -1,0 +1,17 @@
+{
+    "name": "todoman",
+    "type": "static",
+    "static": {
+      "public": "dist",
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    "alias": "todoman",
+    "files": [
+      "dist"
+    ]
+  }
